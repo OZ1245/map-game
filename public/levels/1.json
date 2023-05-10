@@ -1,0 +1,492 @@
+{
+  "name": 1,
+  "author": "Hope Halfbreed",
+  "size": {
+    "x": 10,
+    "y": 10
+  },
+  "playerPosition": [2,3],
+  "content": [
+    [
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": [
+          {
+            "type": "object",
+            "intersected": "true"
+          }
+        ]
+      },
+      {
+        "type": "empty",
+        "objects": [
+          {
+            "type": "object",
+            "intersected": "true"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": [
+          {
+            "type": "object",
+            "crossed": "true"
+          }
+        ]
+      },
+      {
+        "type": "empty",
+        "objects": [
+          {
+            "type": "object",
+            "crossed": "true"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      }
+    ],
+    [
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      }
+    ],
+    [
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "uncrossed",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      }
+    ],
+    [
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      }
+    ],
+    [
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": [
+          {
+            "type": "object",
+            "crossed": "false"
+          }
+        ]
+      },
+      {
+        "type": "empty",
+        "objects": [
+          {
+            "type": "object",
+            "crossed": "false"
+          }
+        ]
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      }
+    ],
+    [
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": [
+          {
+            "type": "object",
+            "crossed": "false"
+          }
+        ]
+      },
+      {
+        "type": "empty",
+        "objects": [
+          {
+            "type": "object",
+            "crossed": "false"
+          }
+        ]
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": [
+          {
+            "type": "npc",
+            "portaint": "",
+            "image": "",
+            "enemy": "false",
+            "route": [],
+            "action": {
+              "type": "dialog",
+              "content": [
+                {
+                  "text": "Я NPC!",
+                  "actions": {
+                    "close": "true",
+                    "skip": "false",
+                    "answers": []
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      }
+    ],
+    [
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      }
+    ],
+    [
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      },
+      {
+        "type": "empty",
+        "objects": []
+      }
+    ]
+  ]
+}
