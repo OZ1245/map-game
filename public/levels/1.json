@@ -45,7 +45,7 @@
         "objects": [
           {
             "type": "object",
-            "intersected": "true"
+            "crossed": true
           }
         ]
       },
@@ -54,7 +54,7 @@
         "objects": [
           {
             "type": "object",
-            "intersected": "true"
+            "crossed": true
           }
         ]
       }
@@ -97,7 +97,7 @@
         "objects": [
           {
             "type": "object",
-            "crossed": "true"
+            "crossed": true
           }
         ]
       },
@@ -106,7 +106,7 @@
         "objects": [
           {
             "type": "object",
-            "crossed": "true"
+            "crossed": true
           }
         ]
       }
@@ -293,7 +293,7 @@
         "objects": [
           {
             "type": "object",
-            "crossed": "false"
+            "crossed": false
           }
         ]
       },
@@ -302,7 +302,7 @@
         "objects": [
           {
             "type": "object",
-            "crossed": "false"
+            "crossed": false
           }
         ]
       },
@@ -345,7 +345,7 @@
         "objects": [
           {
             "type": "object",
-            "crossed": "false"
+            "crossed": false
           }
         ]
       },
@@ -354,7 +354,7 @@
         "objects": [
           {
             "type": "object",
-            "crossed": "false"
+            "crossed": false
           }
         ]
       },
@@ -373,7 +373,7 @@
             "type": "npc",
             "portaint": "",
             "image": "",
-            "enemy": "false",
+            "enemy": false,
             "route": [],
             "action": {
               "type": "dialog",
@@ -381,8 +381,8 @@
                 {
                   "text": "Я NPC!",
                   "actions": {
-                    "close": "true",
-                    "skip": "false",
+                    "close": true,
+                    "skip": false,
                     "answers": []
                   }
                 }
