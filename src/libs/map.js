@@ -29,8 +29,21 @@ export function useMap() {
   // Получение карты
   const getMap = () => computed(() => $store.getters.getMap).value
 
+  /**
+   * Возвращает информацию о ландшафте и обектах на ячейке карты
+   * @param {Array} coords Координаты
+   * 
+   * @returns {Object} Структуированная информация 
+   */
+  const getCellInfo = ([x, y]) => {
+    const map = getMap()
+
+    return map[x][y] 
+  }
+
   return {
     createMap,
-    getMap
+    getMap,
+    getCellInfo
   }
 }

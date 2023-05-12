@@ -70,6 +70,13 @@ export function usePlayer() {
       y = currentY + 1 
     }
 
+    const cellInfo = $map.getCellInfo([x, y])
+    console.log('cellInfo:', cellInfo)
+    
+    if (cellInfo.type === 'uncrossed' || cellInfo.objects.some(o => !o.crossed)) {
+      return
+    }
+
     $store.dispatch('changePlayerPosition', {
       newPosition: [ x, y ],
       oldPosition: [ currentX, currentY ]

@@ -9,11 +9,25 @@
           v-for="(cell, y) in row"
           :key="`cell-${y}`"
           class="map__cell"
+          :class="[
+            { 'map__cell--uncrossed' : cell.type === 'uncrossed' }
+          ]"
           :data-coords="`${x} : ${y}`"
         >
+          <!-- Debug objects -->
           <!-- <template v-if="isPlayer([x,y])">
             <span class="map__player"></span>
           </template> -->
+          <template v-if="cell.objects.length">
+            <span 
+              class="map__object"
+              :class="[
+                {'map__object--uncrossed':isUncrossedObject([x,y])},
+                {'map__object--npc':isNpc([x,y])},
+              ]"
+            ></span>
+          </template>
+          <!-- END Debug objects -->
         </div>
       </template>
     </div>
@@ -48,6 +62,18 @@ let map = computed(() => $map.getMap())
 //   return !!map.value[x][y].objects.find((o) => o.type === 'player')
 // }
 
+const isUncrossedObject = ([x, y]) => {
+  return map.value[x][y].objects.some(o => (
+    o.type === 'object' && o.crossed !== 'crossed'
+  ))
+}
+
+const isNpc = ([x, y]) => {
+  return map.value[x][y].objects.find(o => (
+    o.type === 'npc'
+  ))
+}
+
 const onKeydown = (event) => {
   $gameplay.bindControl(event)
 }
@@ -68,7 +94,7 @@ const onKeydown = (event) => {
   width: 30px;
   height: 30px;
 
-  background-color: red;
+  background-color: blue;
   border-radius: 50%;
 
   position: absolute;
@@ -100,9 +126,13 @@ const onKeydown = (event) => {
   height: var(--map-cell-size);
   // aspect-ratio: 1/1;
 
-  border: 1px solid gray;
+  outline: 1px dashed gray;
 
   position: relative;
+}
+
+.map__cell--uncrossed {
+  background-color: black;
 }
 
 .map__cell::before {
@@ -116,12 +146,30 @@ const onKeydown = (event) => {
   color: gray;
 }
 
-.map__player {
+// .map__player {
+//   display: block;
+//   width: 30px;
+//   height: 30px;
+
+//   background-color: blue;
+//   border-radius: 50%;
+// }
+
+.map__object {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.map__object--uncrossed {
+  background-color: gray;
+}
+.map__object--npc {
   display: block;
   width: 30px;
   height: 30px;
 
-  background-color: blue;
+  background-color: yellow;
   border-radius: 50%;
 }
 </style>
