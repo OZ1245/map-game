@@ -20,7 +20,7 @@ export function usePlayer() {
       throw "Позиция игрока не может быть установлена за пределами карты."
     }
 
-    console.log('map:', map)
+    // console.log('map:', map)
     if (map.length && map[x][y].objects === 'npc') {
       throw "Позиция игрока не может быть установлена. В данных координатах позиция NPC."
     }
@@ -71,7 +71,7 @@ export function usePlayer() {
     }
 
     const cellInfo = $map.getCellInfo([x, y])
-    console.log('cellInfo:', cellInfo)
+    // console.log('cellInfo:', cellInfo)
     
     if (cellInfo.type === 'uncrossed' || cellInfo.objects.some(o => !o.crossed)) {
       return
@@ -81,6 +81,11 @@ export function usePlayer() {
       newPosition: [ x, y ],
       oldPosition: [ currentX, currentY ]
     })
+
+    const aroundInfo = $map.getCellInfoAround([x, y])
+    console.log('aroundInfo:', aroundInfo)
+
+    
   }
 
   return {

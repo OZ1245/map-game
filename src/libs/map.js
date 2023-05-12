@@ -41,9 +41,44 @@ export function useMap() {
     return map[x][y] 
   }
 
+  /**
+   * Получить информацию о ландшафте и объектах вокруг игрока
+   * @param {Array} coords Координаты игрока 
+   * @returns {Array} Структуированная информация
+   */
+  const getCellInfoAround = ([x, y]) => {
+    const map = getMap()
+
+    let data = Array(3)
+      .fill(null)
+      .map(() => Array(3).fill(null));
+    
+    /*
+    data =
+      [0:0][0:1][0:2]
+      [1:0] [P] [1:2]
+      [2:0][2:1][2:2]
+    */
+
+    data[0][0] = map[x - 1][y - 1] ? map[x - 1][y - 1] : null
+    data[0][1] = map[x - 1][y] ? map[x - 1][y] : null
+    data[0][2] = map[x - 1][y + 1] ? map[x - 1][y + 1] : null
+
+    data[1][0] = map[x][y - 1] ? map[x][y - 1] : null
+    // data[1][1] - Player
+    data[1][2] = map[x][y + 1] ? map[x][y + 1] : null
+
+    data[2][0] = map[x + 1][y - 1] ? map[x + 1][y - 1] : null
+    data[2][1] = map[x + 1][y] ? map[x + 1][y] : null
+    data[2][2] = map[x + 1][y + 1] ? map[x + 1][y + 1] : null
+
+    return data
+  }
+
   return {
     createMap,
     getMap,
-    getCellInfo
+    getCellInfo,
+    getCellInfoAround
   }
 }
