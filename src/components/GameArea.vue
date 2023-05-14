@@ -26,6 +26,11 @@
                 {'map__object--npc':isNpc([x,y])},
               ]"
             ></span>
+
+            <NpcObject 
+              v-if="isNpc([x,y])"
+              v-bind="isNpc([x,y])"
+            />
           </template>
           <!-- END Debug objects -->
         </div>
@@ -41,6 +46,8 @@
 import { computed, onMounted, onUnmounted } from 'vue';
 import { useGameplay } from '@/libs/gameplay';
 import { useMap } from '@/libs/map';
+
+import NpcObject from '@/components/NpcObject'
 
 const $gameplay = useGameplay()
 const $map = useMap()
@@ -165,11 +172,12 @@ const onKeydown = (event) => {
   background-color: gray;
 }
 .map__object--npc {
-  display: block;
-  width: 30px;
-  height: 30px;
+  // display: block;
+  // width: 30px;
+  // height: 30px;
 
-  background-color: yellow;
-  border-radius: 50%;
+  // background-color: yellow;
+  // border-radius: 50%;
+  display: none;
 }
 </style>

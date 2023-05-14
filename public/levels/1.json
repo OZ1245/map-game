@@ -375,18 +375,12 @@
             "image": "",
             "enemy": false,
             "route": [],
-            "action": {
-              "type": "dialog",
-              "content": [
-                {
-                  "text": "Я NPC!",
-                  "actions": {
-                    "close": true,
-                    "skip": false,
-                    "answers": []
-                  }
+            "events": {
+              "onBubble": {
+                "payload": {
+                  "text": "Я NPC!"
                 }
-              ]
+              }
             }
           }
         ]

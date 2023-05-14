@@ -81,11 +81,6 @@ export function usePlayer() {
       newPosition: [ x, y ],
       oldPosition: [ currentX, currentY ]
     })
-
-    const aroundInfo = $map.getCellInfoAround([x, y])
-    console.log('aroundInfo:', aroundInfo)
-
-    
   }
 
   return {

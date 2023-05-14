@@ -10,8 +10,8 @@ export function useMap() {
   const $config = useConfig()
 
   const $_map_checkCoords = ([x, y]) => {
-    console.log('--- $_map_checkCoords method ---')
-    console.log('x, y:', x, y)
+    // console.log('--- $_map_checkCoords method ---')
+    // console.log('x, y:', x, y)
     return (x !== -1 && y !== -1) && (x !== $config.size.x && y !== $config.size.y)
   }
 
@@ -67,9 +67,9 @@ export function useMap() {
       [2:0][2:1][2:2]
     */
     
-    console.log('x, y:', x, y)
-    console.log('$_map_checkCoords([x-1, y-1]):', $_map_checkCoords([x - 1, y - 1]))
-    console.log('$_map_checkCoords([x+1, y+1]):', $_map_checkCoords([x + 1, y + 1]))
+    // console.log('x, y:', x, y)
+    // console.log('$_map_checkCoords([x-1, y-1]):', $_map_checkCoords([x - 1, y - 1]))
+    // console.log('$_map_checkCoords([x+1, y+1]):', $_map_checkCoords([x + 1, y + 1]))
 
     data[0][0] = $_map_checkCoords([x - 1, y - 1]) ? map[x - 1][y - 1] : null
     data[0][1] = $_map_checkCoords([x - 1, y]) ? map[x - 1][y] : null
@@ -86,10 +86,27 @@ export function useMap() {
     return data
   }
 
+  const startObjectsEvents = (objects) => {
+    objects.map((o) => {
+      // console.log('o:', o)
+
+      if (o.events) {
+        Object.keys(o.events).forEach((eventName) => {
+          // console.log('eventName:', eventName)
+          // console.log('o.events[eventName]:', o.events[eventName])
+
+          const event = new CustomEvent(eventName, { detail: o.events[eventName].payload })
+          dispatchEvent(event)
+        })
+      }
+    })
+  }
+
   return {
     createMap,
     getMap,
     getCellInfo,
-    getCellInfoAround
+    getCellInfoAround,
+    startObjectsEvents
   }
 }
