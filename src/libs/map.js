@@ -9,11 +9,18 @@ export function useMap() {
   // console.log('settings:', settings)
   const $config = useConfig()
 
+  const $_map_checkCoords = ([x, y]) => {
+    console.log('--- $_map_checkCoords method ---')
+    console.log('x, y:', x, y)
+    return (x !== -1 && y !== -1) && (x !== $config.size.x && y !== $config.size.y)
+  }
+
   // Создание карты
   const createMap = () => {
     // const level = computed(() => $store.getters.getLevel).value
     // $store.dispatch('loadLevel', level)
-    console.log('size:', $config.size) 
+
+    // console.log('size:', $config.size) 
 
     // CSS
     const documentRoot = document.documentElement
@@ -59,18 +66,22 @@ export function useMap() {
       [1:0] [P] [1:2]
       [2:0][2:1][2:2]
     */
+    
+    console.log('x, y:', x, y)
+    console.log('$_map_checkCoords([x-1, y-1]):', $_map_checkCoords([x - 1, y - 1]))
+    console.log('$_map_checkCoords([x+1, y+1]):', $_map_checkCoords([x + 1, y + 1]))
 
-    data[0][0] = map[x - 1][y - 1] ? map[x - 1][y - 1] : null
-    data[0][1] = map[x - 1][y] ? map[x - 1][y] : null
-    data[0][2] = map[x - 1][y + 1] ? map[x - 1][y + 1] : null
+    data[0][0] = $_map_checkCoords([x - 1, y - 1]) ? map[x - 1][y - 1] : null
+    data[0][1] = $_map_checkCoords([x - 1, y]) ? map[x - 1][y] : null
+    data[0][2] = $_map_checkCoords([x - 1, y + 1]) ? map[x - 1][y + 1] : null
 
-    data[1][0] = map[x][y - 1] ? map[x][y - 1] : null
+    data[1][0] = $_map_checkCoords([x, y-1]) ? map[x][y - 1] : null
     // data[1][1] - Player
-    data[1][2] = map[x][y + 1] ? map[x][y + 1] : null
+    data[1][2] = $_map_checkCoords([x, y+1]) ? map[x][y + 1] : null
 
-    data[2][0] = map[x + 1][y - 1] ? map[x + 1][y - 1] : null
-    data[2][1] = map[x + 1][y] ? map[x + 1][y] : null
-    data[2][2] = map[x + 1][y + 1] ? map[x + 1][y + 1] : null
+    data[2][0] = $_map_checkCoords([x+1, y-1]) ? map[x + 1][y - 1] : null
+    data[2][1] = $_map_checkCoords([x+1, y]) ? map[x + 1][y] : null
+    data[2][2] = $_map_checkCoords([x+1, y+1]) ? map[x + 1][y + 1] : null
 
     return data
   }
